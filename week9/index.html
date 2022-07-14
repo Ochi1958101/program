@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>フォームを使ってみる</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>フォームを使ってみる</h1>
+
+            <div>
+                <h2>お問い合わせ</h2>
+                
+                <form action="#" method="post">
+                    <!-- 1行のテキストフィールド -->
+                    <div>
+                        <!-- labelとinputタグを紐付けることで，ラベルをクリックした際に，関連付けられたフォームの要素をアクティブにできる -->
+                        <label for="surname">姓：</label>
+                        <input type="text" name="lastname" id="surname" placeholder="ここには姓を入れてね" required>
+                        
+                        <!-- labelの使い方は上と下どちらでもよい -->
+                        <label>
+                            名：
+                            <input type="text" name="firstname">
+                        </label>
+                    </div>
+
+                    <!-- パスワード -->
+                    <div>
+                        <label>
+                            パスワード：
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+
+                    <!-- チェックボックス -->
+                    <div>
+                        <input type="checkbox" name="agreement" id="agreement">
+                        <label for="agreement">プライバシーポリシーに同意する</label>
+                    </div>
+
+                    <!-- ラジオボタン -->
+                    <!-- グループ化したいものには共通のname属性値を指定する -->
+                    <!-- value属性値がサーバに送信される -->
+                    <div>
+                        <label>
+                            <input type="radio" name="sex" value="female">
+                            女性
+                        </label>
+                        <label>
+                            <input type="radio" name="sex" value="male">
+                            男性
+                        </label>
+                        <label>
+                            <input type="radio" name="sex" value="other">
+                            その他
+                        </label>
+                    </div>
+
+                    <!-- 複数行のテキストフィールド -->
+                    <div>
+                        <label for="requests">要望：</label>
+                        <textarea name="requests" id="requests" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div>
+                        <label>
+                            メールアドレス：
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+
+                    <!-- 日付関連 -->
+                    <div>
+                        <label>
+                            誕生日：
+                            <input type="date" name="date">
+                        </label>
+                    </div>
+
+                    <!-- 色 -->
+                    <div>
+                        <label>
+                            好きな色：
+                            <input type="color" name="color">
+                        </label>
+                    </div>
+
+                    <!-- 電話番号 -->
+                    <div>
+                        <label>
+                            電話番号
+                            <input type="tel" name="tel">
+                        </label>
+                    </div>
+
+                    <!-- ファイル -->
+                    <div>
+                        <label>
+                            ファイルをアップロード：
+                            <input type="file" name="file">
+                        </label>
+                    </div>
+                    
+                    <!-- フォームデータを送信するボタン -->
+                    <div>
+                        <input type="submit" value="送信する">
+                        <input type="reset" value="リセット">
+                        <input type="button" value="このボタン押せるぞ">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </body>
+
+
+</html>
